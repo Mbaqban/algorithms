@@ -1,11 +1,7 @@
 
 from random import randint
-
-
 # Interpolation Search
 # search in sorted array
-
-
 
 def interploationSearch(arr:list,low , high , x):
     """
@@ -13,8 +9,11 @@ def interploationSearch(arr:list,low , high , x):
     """
     # check for end condition
     if (low <= high and x >= arr[low] and x <= arr[high]):
-        
-        # find the next index to search base on interplotaion algorithm 
+
+        # this algorithm is based on binary search
+        # mid = low + (high - low) // 2 
+        # 
+        # but we find the next index to search base on interplotaion algorithm 
         position = low + ((high - low) // (arr[high] - arr[low]) *
                     (x - arr[low]))
 
